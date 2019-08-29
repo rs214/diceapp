@@ -6,7 +6,7 @@ import RollDice from './RollDice';
 function App() {
   return (
     <div className="App">
-       <h1>HELLO from app component</h1>
+       <h1>Dice Game</h1>
        <RollDice />
     </div>
   );

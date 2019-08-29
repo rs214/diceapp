@@ -27,15 +27,15 @@ class RollDice extends Component {
 
     setTimeout(()=> {
       this.setState({rolling: false});
-      }, 500);
+      }, 1000);
   }
 
   render () {
     return(
       <div className="RollDice">
-        <Die face={this.state.die1}/>
-        <Die face={this.state.die2}/>
-        <button onClick={this.roll}>{this.state.rolling ? "Rolling..." : "Roll Dice"}</button>
+        <Die face={this.state.die1} rolling={this.state.rolling}/>
+        <Die face={this.state.die2} rolling={this.state.rolling}/>
+        <button onClick={this.roll} disabled={this.state.rolling}>{this.state.rolling ? "Rolling..." : "Roll Dice"}</button>
       </div>
     )
   }
